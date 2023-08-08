@@ -1,7 +1,8 @@
+import argparse
 import yaml
 
 class YOLOConfig:
-    def __init__(self, train_path, val_path, nc, names):
+    def __init__(self, train_path='/dataset/train', val_path='/dataset/val', nc=2, names=["Ball Carrier", "Player"]):
         self.config = {
             'train': train_path,
             'val': val_path,
@@ -9,7 +10,7 @@ class YOLOConfig:
             'names': names
         }
     
-    def save_to_yaml(self, filename='model.yaml'):
+    def save_to_yaml(self, filename='data.yaml'):
         with open(filename, 'w') as file:
             yaml.dump(self.config, file, default_flow_style=False)
     
@@ -19,11 +20,14 @@ class YOLOConfig:
         return self.config
 
 if __name__ == '__main__':
-    train_path = "/home/etem/Documents/GitHub/YOLOdetectify/dataset/train"
-    val_path = "/home/etem/Documents/GitHub/YOLOdetectify/dataset/val"
-    nc = 2
-    names = ["Ball Carrier", "Player"]
-    
-    config = YOLOConfig(train_path, val_path, nc, names)
-    config.save_to_yaml()
+    parser = argparse.ArgumentParser(description='Create YOLO Config File with Custom Parameters')
+    parser.add_argument('--train_path', default='/dataset/train', help='Path to the training data.')
+    parser.add_argument('--val_path', default='/dataset/val', help='Path to the validation data.')
+    parser.add_argument('--nc', type=int, default=2, help='Number of classes.')
+    parser.add_argument('--names', nargs='+', default=["Ball Carrier", "Player"], help='Names of the classes.')
+
+    args = parser.parse_args()
+
+    yolo_config = YOLOConfig(args.train_path, args.val_path, args.nc, args.names)
+    yolo_config.save_to_yaml()
 
