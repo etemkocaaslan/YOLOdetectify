@@ -50,4 +50,4 @@ _Note_: Modify the paths and values in the above CLI commands according to your 
 - **Etem Kocaaslan**
 
 ## License
-Yolodetectify operates under *LICENSE*. Detailed licensing information is available in the LICENSE file.
+Yolodetectify operates under *MIT License*. Detailed licensing information is available in the LICENSE file.
