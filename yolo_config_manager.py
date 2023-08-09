@@ -2,7 +2,7 @@ import argparse
 import yaml
 
 class YOLOConfig:
-    def __init__(self, train_path='/home/etem/Documents/GitHub/YOLOdetectify/Custom Football Dataset/train', val_path='/home/etem/Documents/GitHub/YOLOdetectify/Custom Football Dataset/val', nc=2, names=["Ball Carrier", "Player"]):
+    def __init__(self, train_path='/home/etem/Documents/GitHub/YOLOdetectify/dataset_soccer/train', val_path='/home/etem/Documents/GitHub/YOLOdetectify/dataset_soccer/val', nc=2, names=["Player","Ball"]):
         self.config = {
             'train': train_path,
             'val': val_path,
@@ -25,10 +25,10 @@ class YOLOConfig:
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Create YOLO Config File with Custom Parameters')
-    parser.add_argument('--train_path', default='/home/etem/Documents/GitHub/YOLOdetectify/Custom Football Dataset/train', help='Path to the training data.')
-    parser.add_argument('--val_path', default='/home/etem/Documents/GitHub/YOLOdetectify/Custom Football Dataset/val', help='Path to the validation data.')
+    parser.add_argument('--train_path', default='/home/etem/Documents/GitHub/YOLOdetectify/dataset_soccer/train', help='Path to the training data.')
+    parser.add_argument('--val_path', default='/home/etem/Documents/GitHub/YOLOdetectify/dataset_soccer/val', help='Path to the validation data.')
     parser.add_argument('--nc', type=int, default=2, help='Number of classes.')
-    parser.add_argument('--names', nargs='+', default=["Ball Carrier", "Player"], help='Names of the classes.')
+    parser.add_argument('--names', nargs='+', default=["Player","Ball"], help='Names of the classes.')
 
     args = parser.parse_args()
 
