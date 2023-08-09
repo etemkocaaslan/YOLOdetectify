@@ -47,7 +47,7 @@ Yolodetectify harnesses the power of the YOLOv8m model to enable efficient objec
 _Note_: Modify the paths and values in the above CLI commands according to your specific configurations.
 
 ## Contributors
-- **Etem Kocaaslan** (and any other collaborators you'd like to highlight)
+- **Etem Kocaaslan**
 
 ## License
 Yolodetectify operates under *LICENSE*. Detailed licensing information is available in the LICENSE file.
