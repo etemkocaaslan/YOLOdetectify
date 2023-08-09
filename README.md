@@ -13,7 +13,7 @@ Yolodetectify harnesses the power of the YOLOv8m model to enable efficient objec
 ## Setup & Installation
 1. Begin by cloning this repository to your local workspace.
    ```bash
-   git clone [URL_of_This_Repository]
+   git clone gh repo clone etemkocaaslan/YOLOdetectify
    ```
 2. Move to the newly cloned project directory:
    ```bash
