@@ -1,6 +1,6 @@
-train: /home/etem/Documents/GitHub/YOLOdetectify/Custom Football Dataset/train
-val: /home/etem/Documents/GitHub/YOLOdetectify/Custom Football Dataset/val
+train: /home/etem/Documents/GitHub/YOLOdetectify/dataset_soccer/train
+val: /home/etem/Documents/GitHub/YOLOdetectify/dataset_soccer/val
 
 nc: 2
 
-names: ["Ball Carrier", "Player"]
+names: ["Player", "Ball"]
