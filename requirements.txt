@@ -45,7 +45,7 @@ nvidia-cusolver-cu11==11.4.0.1
 nvidia-cusparse-cu11==11.7.4.91
 nvidia-nccl-cu11==2.14.3
 nvidia-nvtx-cu11==11.7.91
-opencv-python==4.8.0.74
+opencv-python==4.8.1.78
 outcome==1.2.0
 packaging @ file:///croot/packaging_1678965309396/work
 pandas==2.0.3
